@@ -1,0 +1,9 @@
+﻿{
+  "name": "s34538-kafka-phase2",
+  "private": true,
+  "scripts": {
+    "verify": "python anonymizer/anonymize.py --mapping anonymizer/examples/mapping.json --input anonymizer/examples/sample.md --output anonymizer/examples/output/sample.anon.md && npm --prefix realtime-dashboard run build && npm --prefix history-viewer run build",
+    "dev:realtime": "npm --prefix realtime-dashboard run dev",
+    "dev:history": "npm --prefix history-viewer run dev"
+  }
+}
