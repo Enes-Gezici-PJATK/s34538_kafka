@@ -1,79 +1,105 @@
-# 📈 Kafka Real-Time Stock Dashboard (React + Vite)
+﻿# s34538_kafka - Phase 2 Additional Assignments
 
-This project is a real-time stock data dashboard built with React + Vite. It consumes live stock data via SSE and REST API for 50 fictional companies.
+Student: Enes Gezici  
+Student ID: s34538  
+Course: Analysis of Large Data Sets (ADD)
 
-## 🔑 API Setup
+## Repository purpose
 
-API key from:
-https://add.piotrkojalowicz.dev/
+This repository is the final Phase 2 repository for the additional assignments. It contains AA1, AA2 and AA4 in one repository on the main branch.
 
-Required header:
-X-API-Key: YOUR_KEY
+Included assignments:
 
-or query param:
-?api_key=YOUR_KEY
+- AA1 Local Data Anonymizer
+- AA2 Kafka stock applications
+- AA4 AI-assisted work plan
 
----
+Final submission repository:
 
-## 📡 API Endpoints
+- https://github.com/Enes-Gezici-PJATK/s34538_kafka
 
-- GET /api/tickers → list all tickers  
-- GET /api/latest?ticker=ACME → latest price  
-- GET /api/stream?ticker=ACME → live SSE stream  
+## Folder map
 
----
+```text
+s34538_kafka/
+├── README.md
+├── .gitignore
+├── package.json
+├── anonymizer/
+│   ├── README.md
+│   ├── anonymize.py
+│   ├── examples/
+│   └── screenshots/
+├── realtime-dashboard/
+├── history-viewer/
+├── documentation/
+│   ├── ai-work-plan.md
+│   └── ai-prompts/
+└── consolidation/
+    └── CONSOLIDATION.md
+```
 
-## 📊 App 1 — Realtime Dashboard (React + Vite)
+## AA1 - Anonymizer quick start
 
-Built with React + Vite using EventSource (SSE).
+Run from the repository root:
 
-Features:
-- Live stock price updates
-- Multiple ticker selection
-- Price + timestamp display
-- Small live history
+```bash
+python anonymizer/anonymize.py --mapping anonymizer/examples/mapping.json --input anonymizer/examples/sample.md --output anonymizer/examples/output/sample.anon.md
+```
 
-Run:
+The anonymizer runs locally. It must not call HTTP APIs, LLMs, or external AI services at runtime.
+
+## AA2 - Realtime dashboard quick start
+
+```bash
 cd realtime-dashboard
 npm install
+npm run build
 npm run dev
+```
 
-Env:
-VITE_API_KEY=your_key
+## AA2 - History viewer quick start
 
----
-
-## 📈 App 2 — History Viewer (React + Vite)
-
-Fetches and displays historical stock data.
-
-Features:
-- Select tickers + time range
-- Fetch latest or polling updates
-- Table / chart view
-- Export CSV / JSON
-
-Run:
+```bash
 cd history-viewer
 npm install
+npm run build
 npm run dev
+```
 
----
+The history-viewer folder is the historical stock viewer/downloader application.
 
-## 💾 Notes
+## Root verification
 
-- Data stored ~10 minutes only
-- Rate limit: 1 request / 10s after free tier
-- API key excluded via .gitignore
+From the repository root:
 
----
+```bash
+npm run verify
+git status
+```
 
-## 🧠 Tech Stack
+## API keys and secrets
 
-React + Vite • SSE • REST API • JavaScript
+Real API keys, passwords, tokens, .env files, and cloud credentials must not be committed.
 
----
+API keys must be provided through environment variables or local .env files that are ignored by Git.
 
-## 👤 Author
+If an API key is expired or disabled, live data may not work. This is acceptable as long as keys are not hardcoded and the applications can build/start.
 
-s34538
+## AI work plan
+
+The AA4 AI-assisted work plan is here:
+
+- [documentation/ai-work-plan.md](documentation/ai-work-plan.md)
+
+## AI prompts
+
+Important AI prompts used during Phase 2 are stored here:
+
+- [documentation/ai-prompts/phase2-prompts.md](documentation/ai-prompts/phase2-prompts.md)
+
+## Consolidation notes
+
+The Phase 2 merge explanation is here:
+
+- [consolidation/CONSOLIDATION.md](consolidation/CONSOLIDATION.md)
