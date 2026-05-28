@@ -34,7 +34,6 @@ s34538_kafka/
 │
 └── consolidation/
     └── CONSOLIDATION.md
-    └── CONSOLIDATION.md
 🔐 Important Rules (Security & Compliance)
 ❌ No API keys, tokens, or secrets are stored in the repository
 ✅ Environment variables or .env files are used locally (ignored by Git)
