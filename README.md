@@ -1,162 +1,127 @@
-<<<<<<< HEAD
-Project Overview
-=======
 s34538_kafka - Phase 2 Additional Assignments
 
 Student: Enes Gezici
 Student ID: s34538
 Course: Analysis of Large Data Sets (ADD)
-Repository: https://github.com/Enes-Gezici-PJATK/s34538_kafka
 
-📌 Project Overview
->>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
+📌 Overview
 
-This repository contains the final Phase 2 submission for the Additional Assignments (AA1, AA2, AA4).
-It combines data anonymization, real-time stock applications, and AI-assisted development workflow documentation in a single structured repository.
+This repository contains the final Phase 2 submission for the Additional Assignments (AA1, AA2, and AA4).
 
-The system demonstrates:
+It demonstrates:
 
 Local data anonymization (AA1)
-Real-time dashboard and history viewer applications (AA2)
-AI-assisted development workflow documentation (AA4)
-Clean modular project structure with separation of concerns
-<<<<<<< HEAD
-=======
+Real-time and historical stock applications (AA2)
+AI-assisted planning and development workflow documentation (AA4)
+
+The project is structured as a modular monorepo with separate components for each assignment.
+
 📁 Repository Structure
->>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 s34538_kafka/
 ├── README.md
 ├── .gitignore
 ├── package.json
 │
 ├── anonymizer/                 # AA1 - Local Data Anonymizer
-│   ├── README.md
 │   ├── anonymize.py
+│   ├── README.md
 │   ├── examples/
 │   │   ├── mapping.json
 │   │   ├── sample.md
 │   │   └── output/
 │   └── screenshots/
 │
-├── realtime-dashboard/        # AA2 - Live stock dashboard (frontend)
+├── realtime-dashboard/        # AA2 - Real-time stock dashboard
 │
-├── history-viewer/            # AA2 - Historical stock viewer application
+├── history-viewer/            # AA2 - Historical stock viewer
 │
-├── documentation/             # AA4 - AI-assisted workflow documentation
+├── documentation/             # AA4 - AI-assisted workflow docs
 │   ├── ai-work-plan.md
 │   └── ai-prompts/
 │       └── phase2-prompts.md
 │
 └── consolidation/
     └── CONSOLIDATION.md
-🔐 Important Rules (Security & Compliance)
-❌ No API keys, tokens, or secrets are stored in the repository
-✅ Environment variables or .env files are used locally (ignored by Git)
-❌ No external AI/LLM calls are made inside AA1 anonymizer at runtime
-✅ Applications must build and run without hardcoded credentials
+🔐 Security & Data Policy
+No API keys, secrets, or credentials are stored in the repository
+Environment variables (.env) are used locally and ignored by Git
+The anonymizer runs fully locally (no external APIs or AI services)
+All data used in examples is synthetic or anonymized
 🧹 AA1 - Local Data Anonymizer
 
-The anonymizer processes local files and replaces sensitive information using a mapping file.
+A Python-based tool that replaces sensitive information in text files using a mapping configuration.
 
-▶️ Run Anonymizer
+▶️ Run
 python anonymizer/anonymize.py \
   --mapping anonymizer/examples/mapping.json \
   --input anonymizer/examples/sample.md \
   --output anonymizer/examples/output/sample.anon.md
 Features
 JSON-based replacement rules
-Case-sensitive and case-insensitive support
-UTF-8 safe file handling
-Dry-run capability
-Fully local execution (no external dependencies)
-📊 AA2 - Realtime Dashboard
+Case-sensitive / insensitive support
+UTF-8 safe processing
+Dry-run mode
+Fully offline execution
+📊 AA2 - Real-Time Dashboard
 
-A frontend application for live stock visualization.
+A frontend application for displaying live stock data.
 
-▶️ Run Dashboard
+▶️ Run
 cd realtime-dashboard
 npm install
 npm run build
 npm run dev
-Features
-Live stock data visualization
-Real-time updates
-Modular frontend architecture
 📈 AA2 - History Viewer
 
-Application for viewing and analyzing historical stock data.
+A frontend application for viewing historical stock data.
 
-▶️ Run History Viewer
+▶️ Run
 cd history-viewer
 npm install
 npm run build
 npm run dev
-Features
-Historical data exploration
-Stock data filtering
-Downloadable datasets
-🧠 AA4 - AI-Assisted Work Plan
+🧠 AA4 - AI-Assisted Development
 
-The AI-assisted development workflow, planning, and debugging strategy is documented here:
+This project includes AI-assisted planning, debugging, and workflow documentation.
 
-<<<<<<< HEAD
-📄 documentation/ai-chat-history.md
-=======
-📄 documentation/ai-work-plan.md
->>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
+📄 See: documentation/ai-work-plan.md
 
 Includes:
-Project breakdown strategy
-AI-assisted debugging workflow
-Development planning approach
-Error simulation and debugging steps
-💬 AI Prompts Used (Phase 2)
+Project planning strategy
+Debugging workflow
+AI-assisted development decisions
+Error handling and iteration notes
+💬 AI Prompts
 
-All prompts used during development are documented in:
+All AI prompts used during development are stored in:
 
-<<<<<<< HEAD
 📄 documentation/ai-prompts/phase2-prompts.md
-=======
-📄 documentation/ai-chat/ai-chat-history.md
->>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 
-This includes:
+🧩 Consolidation
 
-Planning prompts
-Debugging prompts
-Implementation guidance
-Refactoring instructions
-🧩 Consolidation Notes
-
-Final integration and merging notes are documented in:
+Final integration notes:
 
 📄 consolidation/CONSOLIDATION.md
 
-This explains:
+Explains how AA1, AA2, and AA4 were merged into a single repository.
 
-How AA1, AA2, and AA4 were merged
-Structural decisions
-Final repository architecture
-🚀 How to Run Entire Project
-
-From repository root:
-
+🚀 Quick Start
 Install dependencies
 npm install
-Run AA1
+Run anonymizer
 python anonymizer/anonymize.py --help
-Run AA2 Dashboard
-cd realtime-dashboard
-npm run dev
-Run AA2 History Viewer
-cd history-viewer
-npm run dev
+Run applications
+cd realtime-dashboard && npm run dev
+cd history-viewer && npm run dev
 📌 Notes
-This project is designed for educational purposes
-All components are modular and independently runnable
-The anonymizer is fully local and does not use external APIs
-<<<<<<< HEAD
-AI was used for planning, debugging support, and documentation assistance (AA4)
-=======
-AI was used for planning, debugging support, and documentation assistance (AA4)
->>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
+Project built for academic purposes
+Fully modular architecture
+AI used for planning and documentation support (AA4)
+All components are independently runnable
+✅ Status
+
+✔ AA1 Completed
+✔ AA2 Completed
+✔ AA4 Completed
+✔ Documentation included
+✔ Ready for submission
