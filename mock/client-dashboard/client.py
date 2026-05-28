@@ -8,4 +8,4 @@ messages = SSEClient(url)
 print("Listening for stock updates...")
 
 for msg in messages:
-    print(msg.dat)
+    print(msg.data)
