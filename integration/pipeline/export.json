@@ -1,0 +1,6 @@
+{
+  "ticker": "AAPL",
+  "price": 185.22,
+  "trader_email": "john@broker.test",
+  "operator_name": "John Smith"
+}

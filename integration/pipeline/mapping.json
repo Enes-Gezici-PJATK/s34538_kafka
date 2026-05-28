@@ -1,0 +1,15 @@
+{
+  "replacements": [
+    {
+      "find": ["john@broker.test"],
+      "replace": "EMAIL_01"
+    },
+    {
+      "find": ["John Smith"],
+      "replace": "PERSON_01"
+    }
+  ],
+  "options": {
+    "case_sensitive": false
+  }
+}
