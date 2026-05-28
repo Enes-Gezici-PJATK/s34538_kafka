@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 Project Overview
+=======
+s34538_kafka - Phase 2 Additional Assignments
+
+Student: Enes Gezici
+Student ID: s34538
+Course: Analysis of Large Data Sets (ADD)
+Repository: https://github.com/Enes-Gezici-PJATK/s34538_kafka
+
+📌 Project Overview
+>>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 
 This repository contains the final Phase 2 submission for the Additional Assignments (AA1, AA2, AA4).
 It combines data anonymization, real-time stock applications, and AI-assisted development workflow documentation in a single structured repository.
@@ -9,6 +20,10 @@ Local data anonymization (AA1)
 Real-time dashboard and history viewer applications (AA2)
 AI-assisted development workflow documentation (AA4)
 Clean modular project structure with separation of concerns
+<<<<<<< HEAD
+=======
+📁 Repository Structure
+>>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 s34538_kafka/
 ├── README.md
 ├── .gitignore
@@ -84,7 +99,11 @@ Downloadable datasets
 
 The AI-assisted development workflow, planning, and debugging strategy is documented here:
 
+<<<<<<< HEAD
 📄 documentation/ai-chat-history.md
+=======
+📄 documentation/ai-work-plan.md
+>>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 
 Includes:
 Project breakdown strategy
@@ -95,7 +114,11 @@ Error simulation and debugging steps
 
 All prompts used during development are documented in:
 
+<<<<<<< HEAD
 📄 documentation/ai-prompts/phase2-prompts.md
+=======
+📄 documentation/ai-chat/ai-chat-history.md
+>>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
 
 This includes:
 
@@ -132,4 +155,8 @@ npm run dev
 This project is designed for educational purposes
 All components are modular and independently runnable
 The anonymizer is fully local and does not use external APIs
+<<<<<<< HEAD
 AI was used for planning, debugging support, and documentation assistance (AA4)
+=======
+AI was used for planning, debugging support, and documentation assistance (AA4)
+>>>>>>> 7eb187b (AA4 Phase A: mock baseline with intentional bugs)
