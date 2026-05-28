@@ -1,105 +1,136 @@
-﻿# s34538_kafka - Phase 2 Additional Assignments
+Project Overview
 
-Student: Enes Gezici  
-Student ID: s34538  
-Course: Analysis of Large Data Sets (ADD)
+This repository contains the final Phase 2 submission for the Additional Assignments (AA1, AA2, AA4).
+It combines data anonymization, real-time stock applications, and AI-assisted development workflow documentation in a single structured repository.
 
-## Repository purpose
+The system demonstrates:
 
-This repository is the final Phase 2 repository for the additional assignments. It contains AA1, AA2 and AA4 in one repository on the main branch.
-
-Included assignments:
-
-- AA1 Local Data Anonymizer
-- AA2 Kafka stock applications
-- AA4 AI-assisted work plan
-
-Final submission repository:
-
-- https://github.com/Enes-Gezici-PJATK/s34538_kafka
-
-## Folder map
-
-```text
+Local data anonymization (AA1)
+Real-time dashboard and history viewer applications (AA2)
+AI-assisted development workflow documentation (AA4)
+Clean modular project structure with separation of concerns
+📁 Repository Structure
 s34538_kafka/
 ├── README.md
 ├── .gitignore
 ├── package.json
-├── anonymizer/
+│
+├── anonymizer/                 # AA1 - Local Data Anonymizer
 │   ├── README.md
 │   ├── anonymize.py
 │   ├── examples/
+│   │   ├── mapping.json
+│   │   ├── sample.md
+│   │   └── output/
 │   └── screenshots/
-├── realtime-dashboard/
-├── history-viewer/
-├── documentation/
+│
+├── realtime-dashboard/        # AA2 - Live stock dashboard (frontend)
+│
+├── history-viewer/            # AA2 - Historical stock viewer application
+│
+├── documentation/             # AA4 - AI-assisted workflow documentation
 │   ├── ai-work-plan.md
 │   └── ai-prompts/
+│       └── phase2-prompts.md
+│
 └── consolidation/
     └── CONSOLIDATION.md
-```
+🔐 Important Rules (Security & Compliance)
+❌ No API keys, tokens, or secrets are stored in the repository
+✅ Environment variables or .env files are used locally (ignored by Git)
+❌ No external AI/LLM calls are made inside AA1 anonymizer at runtime
+✅ Applications must build and run without hardcoded credentials
+🧹 AA1 - Local Data Anonymizer
 
-## AA1 - Anonymizer quick start
+The anonymizer processes local files and replaces sensitive information using a mapping file.
 
-Run from the repository root:
+▶️ Run Anonymizer
+python anonymizer/anonymize.py \
+  --mapping anonymizer/examples/mapping.json \
+  --input anonymizer/examples/sample.md \
+  --output anonymizer/examples/output/sample.anon.md
+Features
+JSON-based replacement rules
+Case-sensitive and case-insensitive support
+UTF-8 safe file handling
+Dry-run capability
+Fully local execution (no external dependencies)
+📊 AA2 - Realtime Dashboard
 
-```bash
-python anonymizer/anonymize.py --mapping anonymizer/examples/mapping.json --input anonymizer/examples/sample.md --output anonymizer/examples/output/sample.anon.md
-```
+A frontend application for live stock visualization.
 
-The anonymizer runs locally. It must not call HTTP APIs, LLMs, or external AI services at runtime.
-
-## AA2 - Realtime dashboard quick start
-
-```bash
+▶️ Run Dashboard
 cd realtime-dashboard
 npm install
 npm run build
 npm run dev
-```
+Features
+Live stock data visualization
+Real-time updates
+Modular frontend architecture
+📈 AA2 - History Viewer
 
-## AA2 - History viewer quick start
+Application for viewing and analyzing historical stock data.
 
-```bash
+▶️ Run History Viewer
 cd history-viewer
 npm install
 npm run build
 npm run dev
-```
+Features
+Historical data exploration
+Stock data filtering
+Downloadable datasets
+🧠 AA4 - AI-Assisted Work Plan
 
-The history-viewer folder is the historical stock viewer/downloader application.
+The AI-assisted development workflow, planning, and debugging strategy is documented here:
 
-## Root verification
+📄 documentation/ai-chat-history.md
 
-From the repository root:
+Includes:
+Project breakdown strategy
+AI-assisted debugging workflow
+Development planning approach
+Error simulation and debugging steps
+💬 AI Prompts Used (Phase 2)
 
-```bash
-npm run verify
-git status
-```
+All prompts used during development are documented in:
 
-## API keys and secrets
+📄 documentation/ai-prompts/phase2-prompts.md
 
-Real API keys, passwords, tokens, .env files, and cloud credentials must not be committed.
+This includes:
 
-API keys must be provided through environment variables or local .env files that are ignored by Git.
+Planning prompts
+Debugging prompts
+Implementation guidance
+Refactoring instructions
+🧩 Consolidation Notes
 
-If an API key is expired or disabled, live data may not work. This is acceptable as long as keys are not hardcoded and the applications can build/start.
+Final integration and merging notes are documented in:
 
-## AI work plan
+📄 consolidation/CONSOLIDATION.md
 
-The AA4 AI-assisted work plan is here:
+This explains:
 
-- [documentation/ai-work-plan.md](documentation/ai-work-plan.md)
+How AA1, AA2, and AA4 were merged
+Structural decisions
+Final repository architecture
+🚀 How to Run Entire Project
 
-## AI prompts
+From repository root:
 
-Important AI prompts used during Phase 2 are stored here:
-
-- [documentation/ai-prompts/phase2-prompts.md](documentation/ai-prompts/phase2-prompts.md)
-
-## Consolidation notes
-
-The Phase 2 merge explanation is here:
-
-- [consolidation/CONSOLIDATION.md](consolidation/CONSOLIDATION.md)
+Install dependencies
+npm install
+Run AA1
+python anonymizer/anonymize.py --help
+Run AA2 Dashboard
+cd realtime-dashboard
+npm run dev
+Run AA2 History Viewer
+cd history-viewer
+npm run dev
+📌 Notes
+This project is designed for educational purposes
+All components are modular and independently runnable
+The anonymizer is fully local and does not use external APIs
+AI was used for planning, debugging support, and documentation assistance (AA4)
